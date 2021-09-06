@@ -21,8 +21,8 @@ export class ProductsServices{
     let host= environment.host;
     return this.http.get<Product[]>(host+"/products?available=true")
   }
-  /*searchProducts(keyword:string):Observable<Product[]>{
-    let host= environment.host;
-    return this.http.get<Product[]>(host+"/products?name_like="+keyword)
-  }*/
+  searchProducts(keyword:string):Observable<Product[]>{
+     let host= environment.host;
+     return this.http.get<Product[]>(host+"/products?name_like="+keyword)
+   }
 }
