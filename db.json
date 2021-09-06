@@ -5,22 +5,6 @@
       "name": "computer",
       "price": 4300,
       "quantity": 60,
-      "selected": true,
-      "available": true
-    },
-    {
-      "id": 2,
-      "name": "Printer",
-      "price": 300,
-      "quantity": 100,
-      "selected": true,
-      "available": true
-    },
-    {
-      "id": 3,
-      "name": "Smartphone",
-      "price": 400,
-      "quantity": 90,
       "selected": false,
       "available": true
     },
