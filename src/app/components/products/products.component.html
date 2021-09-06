@@ -1,13 +1,13 @@
 <nav class="navbar navbar-expand-sm bg-light navbar-light">
   <ul class="navbar navbar-nav">
     <li>
-      <button (click)="onGetAllProducts()" class="btn btn-outline-info ml-2">All</button>
+      <button (click)="onGetAllProducts()" class="btn btn-sm btn-outline-info ml-2">All</button>
     </li>
     <li>
-      <button (click)="onGetSelectedProducts()" class="btn btn-outline-info m-lg-1">Selected</button>
+      <button (click)="onGetSelectedProducts()" class="btn btn-sm btn-outline-info m-lg-1">Selected</button>
     </li>
     <li>
-      <button (click)="oonGetAvaibleProducts()" class="btn btn-outline-info m-lg-1">Available</button>
+      <button (click)="oonGetAvaibleProducts()" class="btn btn-sm btn-outline-info m-lg-1">Available</button>
     </li>
   </ul>
   <ul class="navbar navbar-nav">
@@ -46,6 +46,12 @@
           <td>{{p.quantity}}</td>
           <td>{{p.selected}}</td>
           <td>{{p.available}}</td>
+          <td>
+            <button (click)="onSelect(p)" [ngClass]="p.selected?'btn-outline-success':'btn-outline-danger'" class="btn btn-sm" >
+              <span *ngIf="p.selected">unselect</span>
+              <span *ngIf="!p.selected">select</span>
+            </button>
+          </td>
         </tr>
       </table>
     </ng-container>

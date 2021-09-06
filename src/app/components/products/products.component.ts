@@ -52,4 +52,11 @@ export class ProductsComponent implements OnInit {
       catchError(err => of({dataState:DataStateEnum.LOADED,errorMessage:err.message}))
     )
   }
+
+  onSelect(p: Product) {
+    this.productsService.select(p)
+      .subscribe(data=>{
+        p.selected=data.selected
+      })
+  }
 }

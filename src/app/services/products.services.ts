@@ -24,5 +24,10 @@ export class ProductsServices{
   searchProducts(keyword:string):Observable<Product[]>{
      let host= environment.host;
      return this.http.get<Product[]>(host+"/products?name_like="+keyword)
-   }
+  }
+  select(product: Product):Observable<Product>{
+    let host= environment.host;
+    product.selected=!product.selected;
+    return this.http.put<Product>(host+"/products/"+product.id,product)
+  }
 }
