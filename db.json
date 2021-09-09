@@ -15,6 +15,14 @@
       "selected": true,
       "available": true,
       "id": 4
+    },
+    {
+      "name": "chair",
+      "price": "43",
+      "quantity": "43",
+      "selected": true,
+      "available": true,
+      "id": 5
     }
   ]
 }
