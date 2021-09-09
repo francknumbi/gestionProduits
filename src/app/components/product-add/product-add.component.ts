@@ -31,6 +31,8 @@ export class ProductAddComponent implements OnInit {
 
 
   onSaveProduct() {
+    this.submitted=true;
+    if (this.productFormGroup?.invalid) return;
     this.productService.save(this.productFormGroup.value)
       .subscribe(data=>{
         alert("success saving product");

@@ -3,9 +3,9 @@
     {
       "id": 1,
       "name": "computer",
-      "price": 4300,
+      "price": "4100",
       "quantity": 60,
-      "selected": false,
+      "selected": true,
       "available": true
     },
     {
@@ -23,6 +23,14 @@
       "selected": true,
       "available": true,
       "id": 5
+    },
+    {
+      "name": "90",
+      "price": "0",
+      "quantity": "0",
+      "selected": true,
+      "available": false,
+      "id": 6
     }
   ]
 }

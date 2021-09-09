@@ -40,4 +40,14 @@ export class ProductsServices{
     return this.http.post<Product>(host+"/products",product)
   }
 
+  getProduct(id: number):Observable<Product>{
+    let host= environment.host;
+    return this.http.get<Product>(host+"/products/"+id)
+  }
+
+  updateProduct(product:Product){
+    let host= environment.host;
+    return this.http.put<Product>(host+"/products/"+product.id,product)
+  }
+
 }

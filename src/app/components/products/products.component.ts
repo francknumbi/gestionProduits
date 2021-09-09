@@ -73,4 +73,8 @@ export class ProductsComponent implements OnInit {
   onNewProduct() {
     this.route.navigateByUrl("/newProduct")
   }
+
+  onEdit(id: number) {
+    this.route.navigateByUrl("/editProduct/"+id)
+  }
 }

@@ -10,11 +10,13 @@ import {RouterModule, Routes} from "@angular/router";
 import {HttpClientModule} from "@angular/common/http";
 import {FormsModule, ReactiveFormsModule} from "@angular/forms";
 import { ProductAddComponent } from './components/product-add/product-add.component';
+import { ProductEditComponent } from './components/product-edit/product-edit.component';
 
 const routes: Routes = [
   {path:"products", component:ProductsComponent},
   {path:"", component:HomeComponent},
-  {path:"newProduct", component:ProductAddComponent}
+  {path:"newProduct", component:ProductAddComponent},
+  {path:"editProduct/:id", component:ProductEditComponent}
 ]
 
 @NgModule({
@@ -23,7 +25,8 @@ const routes: Routes = [
     NavBarComponent,
     ProductsComponent,
     HomeComponent,
-    ProductAddComponent
+    ProductAddComponent,
+    ProductEditComponent
   ],
   imports: [
     BrowserModule,
