@@ -5,16 +5,16 @@
       "name": "computer",
       "price": "4100",
       "quantity": 60,
-      "selected": true,
+      "selected": false,
       "available": true
     },
     {
+      "id": 4,
       "name": "play station",
       "price": 500,
       "quantity": 150,
-      "selected": true,
-      "available": true,
-      "id": 4
+      "selected": false,
+      "available": true
     },
     {
       "name": "chair",
@@ -31,6 +31,14 @@
       "selected": true,
       "available": false,
       "id": 6
+    },
+    {
+      "id": 7,
+      "name": "tasse",
+      "price": "1001",
+      "quantity": "33",
+      "selected": false,
+      "available": true
     }
   ]
 }
