@@ -13,14 +13,14 @@
       "name": "play station",
       "price": 500,
       "quantity": 150,
-      "selected": false,
+      "selected": true,
       "available": true
     },
     {
       "name": "chair",
       "price": "43",
       "quantity": "43",
-      "selected": true,
+      "selected": false,
       "available": true,
       "id": 5
     },

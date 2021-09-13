@@ -10,7 +10,7 @@ import {Product} from "../../../model/product.model";
 })
 export class ProductsListComponent implements OnInit {
 
-  @Input()productsInput$:Observable<AppDataState>|null=null;
+  @Input() productsInput$:Observable<AppDataState>|null=null;
   @Output() productsEventEmitter:EventEmitter<ActionEvent> = new EventEmitter<ActionEvent>();
   readonly DataStateEnum= DataStateEnum;
   constructor() { }
