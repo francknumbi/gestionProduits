@@ -19,7 +19,7 @@ export class ProductsListComponent implements OnInit {
 
   }
 
-  onSelect(p: Product) {
+  /*onSelect(p: Product) {
     this.productsEventEmitter.emit({type:ProductActionsTypes.SELECT_PRODUCT,payload:p});
   }
 
@@ -29,9 +29,9 @@ export class ProductsListComponent implements OnInit {
 
   onEdit(p:Product) {
     this.productsEventEmitter.emit({type:ProductActionsTypes.EDIT_PRODUCT,payload:p})
-  }
+  }*/
 
-  onActionEvent($event: ActionEvent) {
+  /*onActionEvent($event: ActionEvent) {
     this.productsEventEmitter.emit($event)
-  }
+  }*/
 }

@@ -1,6 +1,8 @@
-import { Component, OnInit } from '@angular/core';
-import {FormBuilder, FormControl, FormGroup, Validators} from "@angular/forms";
+import {Component, OnInit} from '@angular/core';
+import {FormControl, FormGroup, Validators} from "@angular/forms";
 import {ProductsServices} from "../../services/products.services";
+import {EventDriverSercice} from "../../services/event.driver.sercice";
+import {ProductActionsTypes} from "../../state/product.state";
 
 @Component({
   selector: 'app-product-add',
@@ -20,7 +22,8 @@ export class ProductAddComponent implements OnInit {
     available: new FormControl(true,Validators.required),
   });
 
-  constructor(private productService: ProductsServices) { }
+  constructor(private productService: ProductsServices,
+              private eventDrivenService:EventDriverSercice) { }
 
   ngOnInit(): void {
     /*this.productFormGroup = new FormGroup({
@@ -35,6 +38,7 @@ export class ProductAddComponent implements OnInit {
     if (this.productFormGroup?.invalid) return;
     this.productService.save(this.productFormGroup.value)
       .subscribe(data=>{
+        this.eventDrivenService.publishEvent({type:ProductActionsTypes.PRODUCT_ADDED})
         alert("success saving product");
       });
   }
